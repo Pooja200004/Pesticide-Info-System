@@ -1,0 +1,276 @@
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>Pesticides Information System</title>
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+	<!-- CSS
+	================================================== -->
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<!-- Template styles-->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" >
+	<!-- Responsive styles-->
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<!-- Animation -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<!-- Colorbox -->
+	<link rel="stylesheet" href="{% static 'css/colorbox.css' %}">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	<!--[if lt IE 9]>
+      <script src="{% static 'js/html5shiv.js' %}"></script>
+      <script src="{% static 'js/respond.min.js' %}"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<div class="body-inner">
+
+		<div id="top-bar" class="top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+						<ul class="top-info">
+							
+						</ul>
+					</div>
+					<!--/ Top info end -->
+
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 top-social text-right">
+						<ul class="unstyled">
+							
+						</ul>
+					</div>
+					<!--/ Top social end -->
+				</div>
+				<!--/ Content row end -->
+			</div>
+			<!--/ Container end -->
+		</div>
+		<!--/ Topbar end -->
+
+		<!-- Header start -->
+		<header id="header" class="header-one">
+			<div class="container">
+				<div class="row">
+					<div class="logo-area clearfix">
+						<div class="logo col-xs-12 col-md-3">
+							<a href="index.html">
+								<h1> <span style="color:#000000; font-size:34px;"> Find My </span> <span style="color: #FFCC00; font-size:34px;"> Space </span> </h1> 
+							</a>
+						</div><!-- logo end -->
+
+						<div class="col-xs-12 col-md-9 header-right">
+							<ul class="top-info-box">
+								<li>
+									<div class="info-box">
+										<div class="info-box-content">
+											<p class="info-box-title">Call Us</p>
+											<p class="info-box-subtitle">(+9) 847-291-4353</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="info-box">
+										<div class="info-box-content">
+											<p class="info-box-title">Email Us</p>
+											<p class="info-box-subtitle">office@space.com</p>
+										</div>
+									</div>
+								</li>
+								
+								<li class="header-get-a-quote">
+									<a class="btn btn-primary" href="{% url 'userlogin' %}">Login</a>
+								</li>
+							</ul><!-- Ul end -->
+						</div><!-- header right end -->
+					</div><!-- logo area end -->
+
+				</div><!-- Row end -->
+			</div><!-- Container end -->
+
+			<nav class="site-navigation navigation navdown">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="site-nav-inner pull-left">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+
+								<div class="collapse navbar-collapse navbar-responsive-collapse">
+									<ul class="nav navbar-nav">
+										
+										<li><a href="{% url 'index' %}">Home</a></li>
+                                        
+                                        <li><a href="{% url 'userlogin' %}">Login</a></li>
+
+									</ul>
+									<!--/ Nav ul end -->
+								</div>
+								<!--/ Collapse end -->
+
+							</div><!-- Site Navbar inner end -->
+
+						</div>
+						<!--/ Col end -->
+					</div>
+					<!--/ Row end -->
+
+					<div class="nav-search">
+						<span id="search"><i class="fa fa-search"></i></span>
+					</div><!-- Search end -->
+
+					
+				</div>
+				<!--/ Container end -->
+
+			</nav>
+			<!--/ Navigation end -->
+		</header>
+		<!--/ Header end -->
+
+   <div id="banner-area" class="banner-area" style="background-image:url({% static 'images/banner/banner3.jpg' %})">
+      <div class="banner-text">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="banner-heading">
+                    
+                    
+                  </div>
+               </div><!-- Col end -->
+            </div><!-- Row end -->
+         </div><!-- Container end -->
+      </div><!-- Banner text end -->
+   </div><!-- Banner area end --> 
+
+
+  <section id="main-container" class="main-container">
+      <div class="container">
+
+         <div class="row text-center" style="margin-left:300px;">
+            <h2 class="section-title" style="color:#0033FF; font-weight:bold;">Welcome to Login Panel</h2>
+            <h3 class="section-sub-title"><hr></h3>
+            
+            <form method="post">
+    {% csrf_token %}
+    <table  width="527" height="155">
+        <tr>
+            <td> Username </td>
+            <td> <input type="text" name="t1" style="width:200px;"></td>
+        </tr>
+        <tr>
+            <td> Password </td>
+            <td> <input type="password" name="t2" style="width:200px;"></td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'userregistration' %}" style="color:#996600;"> Registration </a> </td>
+            <td> <input type="submit" style="width:100px; background-color:#0000CC; color:#FFFFFF;">
+            <input type="reset" value="Reset" style="width:100px; background-color:#009966; color:#FFFFFF;">
+            </td>
+        </tr>
+
+
+</table>
+</form>
+            
+            
+            
+         </div><!--/ Title row end -->
+
+         
+
+           
+
+            
+         </div><!-- 1st row end -->
+
+         
+
+         <div class="row">
+
+            
+         
+         </div><!-- Content row -->
+      </div><!-- Conatiner end -->
+   </section><!-- Main container end -->
+	
+
+   <footer id="footer" class="footer bg-overlay">
+			
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<div class="copyright-info">
+								<span>Copyright © 2020 Find My Space</span>
+							</div>
+						</div>
+
+						
+					</div><!-- Row end -->
+
+					<div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+						<button class="btn btn-primary" title="Back to Top">
+							<i class="fa fa-angle-double-up"></i>
+						</button>
+					</div>
+
+				</div><!-- Container end -->
+			</div><!-- Copyright end -->
+
+		</footer><!-- Footer end -->
+
+
+		<!-- Javascript Files
+	================================================== -->
+
+		<!-- initialize jQuery Library -->
+		<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+		<!-- Bootstrap jQuery -->
+		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+		<!-- Owl Carousel -->
+		<script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+		<!-- Color box -->
+		<script type="text/javascript" src="{% static 'js/jquery.colorbox.js' %}"></script>
+		<!-- Isotope -->
+		<script type="text/javascript" src="{% static 'js/isotope.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/ini.isotope.js' %}"></script>
+
+
+    <!-- Google Map API Key-->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+		<!-- Google Map Plugin-->
+		<script type="text/javascript" src="{% static 'js/gmap3.js' %}"></script>
+ 
+	 <!-- Template custom -->
+	 <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+	</div><!-- Body inner end -->
+</body>
+
+</html>

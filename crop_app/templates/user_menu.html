@@ -1,0 +1,32 @@
+  <nav class="navbar navbar-expand-lg bg-dark navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-warning" style="font-family: courier-new;">Pesticides Portal</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'user_home' %}" class="nav-item nav-link active">Home</a>
+                 <a href="{% url 'catwise_products' %}" class="nav-item nav-link text-white">Products</a>
+
+
+                 <a href="{% url 'custorder_view' %}" class="nav-item nav-link text-white">My Order</a>
+
+
+                <a href="{% url 'search_measurement' %}" class="nav-item nav-link text-white">Pesticides Measurement</a>
+                <a href="{% url 'search_crop_pesticides' %}" class="nav-item nav-link text-white">Crop pesticides</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">My Account</a>
+                    <div class="dropdown-menu bg-primary m-0">
+                        <a href="{% url 'index' %}" class="dropdown-item bg-primary text-white">Logout</a>
+                       
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </nav>

@@ -1,0 +1,51 @@
+  <nav class="navbar navbar-expand-lg bg-dark navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-warning" style="font-family: courier-new;">Pesticides Portal</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'dealer_home' %}" class="nav-item nav-link active">Home</a>
+
+                 <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Category</a>
+                    <div class="dropdown-menu bg-primary m-0">
+                        <a href="{% url 'cname' %}" class="dropdown-item bg-primary text-white">Add</a>
+                        <a href="{% url 'cname_view' %}" class="dropdown-item bg-primary text-white">View</a>
+
+                    </div>
+                </div>
+
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                    <div class="dropdown-menu bg-primary m-0">
+                        <a href="{% url 'druginfo' %}" class="dropdown-item bg-primary text-white">Add</a>
+            <a href="{% url 'druginfo_view' %}" class="dropdown-item bg-primary text-white">View</a>
+
+                    </div>
+                </div>
+
+
+
+
+                 <a href="{% url 'custorder_view_dealer' %}" class="nav-item nav-link text-white">Customer Orders</a>
+
+
+
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">My Account</a>
+                    <div class="dropdown-menu bg-primary m-0">
+                        <a href="{% url 'index' %}" class="dropdown-item bg-primary text-white">Logout</a>
+                       
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </nav>

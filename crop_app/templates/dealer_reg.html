@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pesticides Information System - Registration</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'images2/icons/favicon.ico'%}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor2/bootstrap/css/bootstrap.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts2/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts2/Linearicons-Free-v1.0.0/icon-font.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor2/animate/animate.css'%}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor2/css-hamburgers/hamburgers.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor2/animsition/css/animsition.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor2/select2/select2.min.css'%}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor2/daterangepicker/daterangepicker.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css2/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css2/main1.css'%}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter" style="width:100%">
+		<div class="container-login100" style="background-image: url({% static 'images2/bg-01.jpg'%});">
+			<div class="wrap-login100 p-t-30 p-b-50">
+				<span class="login100-form-title p-b-41">
+					Dealer Registration..!
+				</span>
+				<form class="login100-form validate-form" method="post">
+					{% if msg %}
+					<p style="color:red;font-weight:bold;text-align:center;">{{msg}} </p>
+					<p style="color:red;font-weight:bold;text-align:center"> <a href="{% url 'login' %}">Login Now..!</a> </p>
+
+					{% endif %}
+					{% csrf_token %}
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="t1" autocomplete="off" placeholder="FirstName" required pattern="[A-Za-z\s]+" title="Enter Character only">
+
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" autocomplete="off" name="t11" placeholder="LastName" required pattern="[A-Za-z\s]+" title="Enter Character only">
+						
+					</div>
+
+
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" autocomplete="off" name="t2" placeholder="City" required pattern="[A-Za-z0-9\s]+" title="Enter Character only">
+						
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="t22" autocomplete="off" placeholder="Enter Address" required pattern="[A-Za-z0-9\s]+" title="Enter Character only">
+						
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="text" maxlength="6"  autocomplete="off"name="t3" placeholder="Pincode" required pattern="[0-9]{6}" title="Enter Valid Pincode">
+						
+					</div>
+
+
+					
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="email" name="t5" placeholder="Email" required>
+						
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="text" autocomplete="off"  maxlength="10" name="t6" placeholder="Mobile no" required pattern="[6-9]{1}[0-9]{9}" title="Enter valid Contact Number">
+						
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" autocomplete="off" name="t7" placeholder="Password" required pattern=".{6,}" title="Enter Minimum 6 digits">
+						
+					</div>
+
+
+					<div class="container-login100-form-btn m-t-32" style="margin-left:-50px">
+						<button class="login100-form-btn" type="submit" style="width:200px;">
+							SUBMIT
+						</button>
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="{% static 'vendor2/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor2/animsition/js/animsition.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor2/bootstrap/js/popper.js'%}"></script>
+	<script src="{% static 'vendor2/bootstrap/js/bootstrap.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor2/select2/select2.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor2/daterangepicker/moment.min.js'%}"></script>
+	<script src="{% static 'vendor2/daterangepicker/daterangepicker.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor2/countdowntime/countdowntime.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js2/main.js'%}"></script>
+
+</body>
+</html>

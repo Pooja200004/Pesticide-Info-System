@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pesticides Information System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+	  <div class="bg-top navbar-light">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-center align-items-stretch">
+    			<div class="col-md-4 d-flex align-items-center py-4">
+    				<a class="navbar-brand" href="index.html">JUMP PAINT 	</a>
+    			</div>
+	    		<div class="col-lg-8 d-block">
+		    		<div class="row d-flex">
+
+
+
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center px-4">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	       {% include 'admin_menu.html' %}
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/bg_1.jpg'%});">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+ <section class="ftco-services ftco-no-pb">
+			<div class="container-wrap">
+				<div class="row no-gutters">
+         <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
+           <p><span style="color:#FFFFFF;"> <a href="{% url 'paintinfo_view' %}"> Paint View </a> </span> </p>
+          </div>
+          <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
+
+          </div>
+           <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
+
+          </div>
+          <div class="col-md-3 d-flex services align-self-stretch py-5 px-4 ftco-animate bg-darken">
+
+          </div>
+        </div>
+			</div>
+		</section>
+    <section class="ftco-section bg-light">
+<h1 style="color:#993300; text-align:center;"><strong>Customer Order</strong></h1>
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+<table width="300" align="center">
+    <tr>
+        <td>Customer id</td>
+        <td><input type="text" name="t1" required pattern="[A-Za-z0-9]+" title="Enter Valid Customer ID"></td>
+    </tr>
+    <tr>
+        <td>Order no</td>
+        <td><input type="text" name="t2" required pattern="[0-9]" title="Enter Valid Order number"></td>
+    </tr>
+    <tr>
+        <td>Product name</td>
+        <td><input type="text" name="t3" required pattern="[A-Za-z\s]+" title="Enter Paint name"></td>
+    </tr>
+    <tr>
+        <td>Quantity</td>
+        <td><input type="text" name="t4" required pattern="[0-9]" title="Enter Number"></td>
+    </tr>
+    <tr>
+        <td>Unit price</td>
+        <td><input type="text" name="t5" required pattern="[0-9]" title="Enter Price "></td>
+    </tr>
+    <tr>
+        <td>Total gst</td>
+        <td><input type="text" name="t6" required pattern="[0-9]" title="Enter Gst Amount"></td>
+    </tr>
+        <tr>
+        <td>Cgst</td>
+        <td><input type="text" name="t7" required pattern="[0-9]" title="Enter Cgst Amount"></td>
+    </tr>
+        <tr>
+        <td>Sgst</td>
+        <td><input type="text" name="t8" required pattern="[0-9]" title="Enter Sgst Amount"></td>
+    </tr>
+    <tr>
+        <td>Grand total</td>
+        <td><input type="text" name="t9" required pattern="[0-9]" title="Enter Total Amount"></td>
+    </tr>
+    <tr>
+        <td>Order status</td>
+        <td><input type="text" name="t10" required pattern="[A-Za-z\s]+" title="Enter Characters Only "></td>
+    </tr>
+     <tr>
+        <td>Payment status</td>
+        <td><input type="text" name="t11" required pattern="[A-Za-z\s]+" title="Enter Characters Only"></td>
+    </tr>
+    <tr>
+        <td>Order date</td>
+        <td><input type="date" name="t12" required title="Enter thh date" ></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit"></td>
+    </tr>
+</table>
+</form>
+</section>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Pesticides Info.. All rights reserved  <i class="icon-heart" aria-hidden="true"></i>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js'%}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js'%}"></script>
+  <script src="{% static 'js/popper.min.js'%}"></script>
+  <script src="{% static 'js/bootstrap.min.js'%}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js'%}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js'%}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js'%}"></script>
+  <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js'%}"></script>
+  <script src="{% static 'js/scrollax.min.js'%}"></script>
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+  </body>
+</html>
